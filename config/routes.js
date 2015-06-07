@@ -32,8 +32,34 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
+  'GET /': {
+    controller: 'home',
+    action: 'index'
+  },
+
+  'GET /q': {
+     controller: 'home',
+     action: 'line'
+  },
+
+  'GET /add': {
+     controller: 'home',
+     action: 'index'
+  },
+
+  'GET /updates': {
+     controller: 'home',
+     action: 'updates'
+  },
+
+  '/superuser/create': {
+     controller: 'q',
+     action: 'create'
+  },
+
+  'POST /addItem': {
+     controller: 'q',
+     action: 'add'
   }
 
   /***************************************************************************

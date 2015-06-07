@@ -9,4 +9,12 @@
 
 module.exports = {
 
+   add: function(req, res) {
+      //Logic goes here
+   },
+
+   create: function(req, res) {
+      //Logic goes here
+   }
+
 };
