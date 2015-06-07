@@ -1,0 +1,44 @@
+<% include parts/dependencies.ejs %>
+<% include parts/navbar.ejs %>
+
+<br>
+<br>
+
+<div class="container">
+	<h1>View Line</h1>
+	<br>
+
+	<h3>Device Details</h3>
+	<form>
+		<div class="input-group">
+			<label for="deviceMake">Device Make</label>
+			<input type="text" id="deviceMake" name="deviceMake" class="form-control" placeholder="Device Make">
+		</div>
+		<div class="input-group">
+			<label for="deviceModel">Device Model</label>
+			<input type="text" id="deviceModel" name="deviceModel" class="form-control" placeholder="Device Model">
+		</div>
+		<div class="input-group">
+			<label for="repairType">Repair Type</label>
+			<input type="text" id="repairType" name="repairType" class="form-control" placeholder="Repair Type">
+		</div>
+		<div class="input-group">
+			<label for="repairLength">Repair Length (in hours)</label>
+			<input type="number" id="repairLength" name="repairLength" class="form-control" placeholder="1">
+		</div>
+	</form>
+
+	<br>
+
+	<h3>Other Details</h3>
+	<form>
+		<div class="input-group">
+			<label for="ticketNumber">Ticket Number</label>
+			<input type="number" id="ticketNumber" name="ticketNumber" class="form-control" placeholder="9861">
+		</div>
+		<div class="input-group">
+			<label for="promiseTime">Promsie Time</label>
+			<!-- Date and Time selector -->
+		</div>
+	</form>
+</div>
