@@ -1,3 +1,3 @@
-# TheQ | The Virtual Line
+# TheQ
 
-Keep track of the line easier and more efficiently with TheQ
+a [Sails](http://sailsjs.org) application
