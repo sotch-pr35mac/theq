@@ -4,6 +4,12 @@
   },
   "schema": {
     "q": {
+      "location": {
+        "type": "string"
+      },
+      "line": {
+        "type": "array"
+      },
       "id": {
         "type": "integer",
         "autoIncrement": true,
