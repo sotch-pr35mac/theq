@@ -81,22 +81,24 @@ module.exports = {
 
 						if(thisYear > promisedYear) {
 	                  updatedLine[i].urgent = true;
-							console.log("year");
 	               }
 	               else if(thisMonth > promisedMonth) {
 	                  updatedLine[i].urgent = true;
-							console.log("month");
 	               }
 	               else if(thisDay > promisedDay) {
 	                  updatedLine[i].urgent = true;
-							console.log("day");
 	               }
 						else if(thisDay == promisedDay) {
 							if(thisHour > promisedHour) {
 								updatedLine[i].urgent = true;
 							}
-							else if(thisMinute > promisedMinute) {
-								updatedLine[i].urgent = true;
+							else if(thisHour == promisedHour) {
+								if(thisMinute > promisedMinute) {
+									updatedLine[i].urgent = true;
+								}
+								else {
+									break;
+								}
 							}
 							else {
 								break;

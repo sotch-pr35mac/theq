@@ -2,42 +2,62 @@
   "data": {
     "q": [
       {
-        "location": "K",
+        "location": "Kalamazoo",
         "line": [
           {
-            "deviceMake": "test",
-            "deviceModel": "test",
-            "repairType": "test",
-            "repairLength": 1,
+            "deviceMake": "lg",
+            "deviceModel": "g2",
+            "repairType": "water damage",
+            "repairLength": 4,
             "ticketNumber": "",
-            "promiseTime": "2015/06/20 11:00",
+            "promiseTime": "2015/06/08 14:00",
             "urgent": false,
             "started": ""
           },
           {
-            "deviceMake": "test",
-            "deviceModel": "test",
-            "repairType": "test",
-            "repairLength": 1,
+            "deviceMake": "lg",
+            "deviceModel": "g2",
+            "repairType": "water damage",
+            "repairLength": 4,
             "ticketNumber": "",
-            "promiseTime": "2015/06/20 11:00",
+            "promiseTime": "2015/06/08 14:00",
             "urgent": false,
             "started": ""
           },
           {
-            "deviceMake": "apple",
-            "deviceModel": "device",
+            "deviceMake": "Apple",
+            "deviceModel": "iphone 6+",
             "repairType": "screen",
             "repairLength": 1,
-            "ticketNumber": "10000",
-            "promiseTime": "2015/06/30 11:00",
+            "ticketNumber": "",
+            "promiseTime": "2015/06/08 17:00",
+            "urgent": false,
+            "started": ""
+          },
+          {
+            "deviceMake": "Apple",
+            "deviceModel": "iphone 6+",
+            "repairType": "screen",
+            "repairLength": 1,
+            "ticketNumber": "",
+            "promiseTime": "2015/06/08 17:00",
+            "urgent": false,
+            "started": ""
+          },
+          {
+            "deviceMake": "test",
+            "deviceModel": "test",
+            "repairType": "test",
+            "repairLength": null,
+            "ticketNumber": "900000",
+            "promiseTime": "2015/06/08 18:00",
             "urgent": false,
             "started": ""
           }
         ],
-        "createdAt": "2015-06-08T06:14:20.662Z",
-        "updatedAt": "2015-06-08T06:40:11.328Z",
-        "id": 10
+        "createdAt": "2015-06-08T15:30:56.869Z",
+        "updatedAt": "2015-06-08T15:32:54.003Z",
+        "id": 13
       }
     ]
   },
@@ -66,7 +86,7 @@
   },
   "counters": {
     "q": {
-      "id": 10
+      "id": 13
     }
   }
 }

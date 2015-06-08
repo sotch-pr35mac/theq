@@ -58,25 +58,26 @@ module.exports = {
                var promisedDay = parseInt(promisedDateDetail[2]);
                var promisedHour = parseInt(promisedTimeDetail[0]);
                var promisedMinute = parseInt(promisedTimeDetail[1]);
-
                if(thisYear > promisedYear) {
                   updatedLine[i].urgent = true;
-                  console.log("year");
                }
                else if(thisMonth > promisedMonth) {
                   updatedLine[i].urgent = true;
-                  console.log("month");
                }
                else if(thisDay > promisedDay) {
                   updatedLine[i].urgent = true;
-                  console.log("day");
                }
                else if(thisDay == promisedDay) {
                   if(thisHour > promisedHour) {
                      updatedLine[i].urgent = true;
                   }
-                  else if(thisMinute > promisedMinute) {
-                     updatedLine[i].urgent = true;
+                  else if(thisHour == promisedHour) {
+                     if(thisMinute > promisedMinute) {
+                        updatedLine[i].urgent = true;
+                     }
+                     else {
+                        break;
+                     }
                   }
                   else {
                      break;
@@ -171,22 +172,24 @@ module.exports = {
 
                if(thisYear > promisedYear) {
                   updatedLine[i].urgent = true;
-                  console.log("year");
                }
                else if(thisMonth > promisedMonth) {
                   updatedLine[i].urgent = true;
-                  console.log("month");
                }
                else if(thisDay > promisedDay) {
                   updatedLine[i].urgent = true;
-                  console.log("day");
                }
                else if(thisDay == promisedDay) {
                   if(thisHour > promisedHour) {
                      updatedLine[i].urgent = true;
                   }
-                  else if(thisMinute > promisedMinute) {
-                     updatedLine[i].urgent = true;
+                  else if(thisHour == promisedHour) {
+                     if(thisMinute > promisedMinute) {
+                        updatedLine[i].urgent = true;
+                     }
+                     else {
+                        break;
+                     }
                   }
                   else {
                      break;
