@@ -3,40 +3,9 @@
     "q": [
       {
         "location": "Kalamazoo",
-        "line": [
-          {
-            "deviceMake": "Apple",
-            "deviceModel": "IPhone 4S",
-            "repairType": "Combo",
-            "repairLength": 1,
-            "ticketNumber": "9891",
-            "promiseTime": "2015/06/08 14:00",
-            "urgent": true,
-            "started": "Preston"
-          },
-          {
-            "deviceMake": "Apple",
-            "deviceModel": "iPhone 5C",
-            "repairType": "Screen",
-            "repairLength": 1,
-            "ticketNumber": "9998",
-            "promiseTime": "2015/06/08 16:00",
-            "urgent": true,
-            "started": ""
-          },
-          {
-            "deviceMake": "Apple ",
-            "deviceModel": "iPhone 6+",
-            "repairType": "Water damage",
-            "repairLength": 3,
-            "ticketNumber": "10002",
-            "promiseTime": "2015/06/08 19:00",
-            "urgent": false,
-            "started": ""
-          }
-        ],
+        "line": [],
         "createdAt": "2015-06-08T15:30:56.869Z",
-        "updatedAt": "2015-06-08T19:53:50.354Z",
+        "updatedAt": "2015-06-08T23:44:52.416Z",
         "id": 13
       }
     ]

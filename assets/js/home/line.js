@@ -91,31 +91,49 @@ $(document).ready(function() {
 	});
 	$(".action_buttons-complete").click(function() {
 		var self = this;
-		var id = self.id;
-		var idDetails = id.split("-", 3);
-		var storeLocation = idDetails[1];
-		var ticketNumber = idDetails[2];
 
-		$.ajax({
-			type: 'POST',
-			url: '/q/removeByIndex',
-			data: {
-				storeLocation: storeLocation,
-				ticketNumber: ticketNumber
-			},
-			success: function(data) {
-				if(data.success == true) {
-					swal("Completed!", "You have successfully completed the repair!", "success");
-					window.location.reload();
-				}
-				else {
-					swal("Uh-oh!", "There was an error marking the repair as complete.", "error");
-					console.log(data);
-				}
-			},
-			error: function(data) {
-				swal("Uh-oh!", "There was an error marking the reapir as complete.", "error");
-				console.log(data);
+		swal({
+			title: "Are you sure?",
+			text: "Are you sure you want to mark this repair complete and remove it permanantly from the queue?",
+			type: "warning",
+			showCancelButton: true,
+			confirmButtonText: "Yes, Mark Complete",
+			cancelButtonText: "No, Keep in Q",
+			closeOnConfirm: false,
+			closeOnCancel: false,
+		},
+		function(isConfirm) {
+			if(isConfirm) {
+				var id = self.id;
+				var idDetails = id.split("-", 3);
+				var storeLocation = idDetails[1];
+				var ticketNumber = idDetails[2];
+
+				$.ajax({
+					type: 'POST',
+					url: '/q/removeByIndex',
+					data: {
+						storeLocation: storeLocation,
+						ticketNumber: ticketNumber
+					},
+					success: function(data) {
+						if(data.success == true) {
+							swal("Completed!", "You have successfully completed the repair!", "success");
+							window.location.reload();
+						}
+						else {
+							swal("Uh-oh!", "There was an error marking the repair as complete.", "error");
+							console.log(data);
+						}
+					},
+					error: function(data) {
+						swal("Uh-oh!", "There was an error marking the reapir as complete.", "error");
+						console.log(data);
+					}
+				});
+			}
+			else {
+				swal("Cancelled", "Repair staying in queue.", "warning");
 			}
 		});
 	});
