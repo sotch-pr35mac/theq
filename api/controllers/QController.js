@@ -111,13 +111,14 @@ module.exports = {
                var promisedDetail = updatedLine[i].promiseTime.split(" ");
                var promisedDateDetail = promisedDetail[0].split("/");
                var promisedTimeDetail = promisedDetail[1].split(":");
-               promisedTimeDetail[1] = parseInt(promisedTimeDetail[1], 10);
-               promisedTimeDetail[1] = promisedTimeDetail[1] + updatedLine[i].repairLength;
+               promisedTimeDetail[0] = parseInt(promisedTimeDetail[0], 10);
+               promisedTimeDetail[0] = promisedTimeDetail[0] - updatedLine[i].repairLength;
                var promisedYear = parseInt(promisedDateDetail[0]);
                var promisedMonth = parseInt(promisedDateDetail[1]);
                var promisedDay = parseInt(promisedDateDetail[2]);
                var promisedHour = parseInt(promisedTimeDetail[0]);
                var promisedMinute = parseInt(promisedTimeDetail[1]);
+
                if(thisYear > promisedYear) {
                   updatedLine[i].urgent = true;
                }
@@ -128,16 +129,8 @@ module.exports = {
                   updatedLine[i].urgent = true;
                }
                else if(thisDay == promisedDay) {
-                  if(thisHour > promisedHour) {
+                  if(thisHour >= promisedHour) {
                      updatedLine[i].urgent = true;
-                  }
-                  else if(thisHour == promisedHour) {
-                     if(thisMinute > promisedMinute) {
-                        updatedLine[i].urgent = true;
-                     }
-                     else {
-                        break;
-                     }
                   }
                   else {
                      break;
@@ -222,8 +215,8 @@ module.exports = {
                var promisedDetail = updatedLine[i].promiseTime.split(" ");
                var promisedDateDetail = promisedDetail[0].split("/");
                var promisedTimeDetail = promisedDetail[1].split(":");
-               promisedTimeDetail[1] = parseInt(promisedTimeDetail[1], 10);
-               promisedTimeDetail[1] = promisedTimeDetail[1] + updatedLine[i].repairLength;
+               promisedTimeDetail[0] = parseInt(promisedTimeDetail[0], 10);
+               promisedTimeDetail[0] = promisedTimeDetail[0] - updatedLine[i].repairLength;
                var promisedYear = parseInt(promisedDateDetail[0]);
                var promisedMonth = parseInt(promisedDateDetail[1]);
                var promisedDay = parseInt(promisedDateDetail[2]);
@@ -240,16 +233,8 @@ module.exports = {
                   updatedLine[i].urgent = true;
                }
                else if(thisDay == promisedDay) {
-                  if(thisHour > promisedHour) {
+                  if(thisHour >= promisedHour) {
                      updatedLine[i].urgent = true;
-                  }
-                  else if(thisHour == promisedHour) {
-                     if(thisMinute > promisedMinute) {
-                        updatedLine[i].urgent = true;
-                     }
-                     else {
-                        break;
-                     }
                   }
                   else {
                      break;
@@ -258,7 +243,6 @@ module.exports = {
                else {
                   break;
                }
-
             }
 
             locD.line = updatedLine;
