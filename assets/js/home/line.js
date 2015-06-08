@@ -1,3 +1,9 @@
+/*
+ * Author: Preston Stosur-Bassett
+ * Date: June 8, 2015
+ * Description: The script handles all the function for the /home/line.ejs
+*/
+
 $(document).ready(function() {
 	//Set Refresh Interval
 	setTimeout(function() {
@@ -7,6 +13,8 @@ $(document).ready(function() {
 	//OnChangeEventListeners
 	$("#locationSelect").change(function() {
 		var locationIndex = $("#locationSelect").val();
+
+		localStorage.storeLocation = document.getElementById("locationSelect").options[locationIndex].text;
 
 		if($("#placeholder").val() == "none") {
 			$("#placeholder").val(locationIndex);

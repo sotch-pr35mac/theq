@@ -11,6 +11,11 @@ $(document).ready(function() {
 		inline:true
 	});
 
+	//Add OnChangeEventListeners
+	$("#storeLocation").change(function() {
+		localStorage.storeLocation = $("#storeLocation").val();
+	});
+
 	//AddEventListeners
 	$("#addItem-Cancel").click(function() {
 		//Reset all the fields

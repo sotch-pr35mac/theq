@@ -68,3 +68,13 @@
 
 <!-- On Page Scripts Load Here -->
 <script type="text/javascript" src="/js/home/add.js"></script>
+
+<script type="text/javascript">
+	//Pre-Load Functions
+	$(document).ready(function() {
+		//Load some default values to speed up the process a bit.
+		if(localStorage.storeLocation != null || localStorage.storeLocation != undefined) {
+			$("#storeLocation").val(localStorage.storeLocation);
+		}
+	});
+</script>

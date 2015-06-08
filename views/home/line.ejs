@@ -57,3 +57,17 @@
 
 <!-- Loading Page-Only Scripts -->
 <script type="text/javascript" src="/js/home/line.js"></script>
+
+<script type="text/javascript">
+	if(localStorage.storeLocation != null || localStorage.storeLocation != undefined) {
+		for(var i = 0; i < document.getElementById("locationSelect").options.length; i++) {
+			if(document.getElementById("locationSelect").options[i].text == localStorage.storeLocation) {
+				var iPrime = i - 1;
+				$("#locationSelect").val(iPrime);
+				$("#placeholder").val(iPrime);
+				$("#q-index-"+iPrime).show();
+				break;
+			}
+ 		}
+	}
+</script>
