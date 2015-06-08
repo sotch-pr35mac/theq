@@ -34,15 +34,21 @@ $(document).ready(function() {
 		var idDetails = id.split("-", 3);
 		var storeLocation = idDetails[1];
 		var ticketNumber = idDetails[2];
+		var defaultTechnician = "";
+
+		if(localStorage.defaultTechnician != null && localStorage.defaultTechnician != undefined) {
+			defaultTechnician = localStorage.defaultTechnician;
+		}
 
 		swal({
 			title: "Start Repair",
 			text: "Assign Technician",
 			type: "input",
 			showCancelButton: true,
-			closeOnConfirm: true,
+			closeOnConfirm: false,
 			animation: "slide-from-top",
-			inputPlaceholder: "Technician Name or Initials"
+			inputPlaceholder: "Technician Name or Initials",
+			inputValue: defaultTechnician
 		},
 		function(inputValue) {
 			if(inputValue === false) {
@@ -51,6 +57,10 @@ $(document).ready(function() {
 			if(inputValue === "") {
 				swal.showInputError("Please enter an identifier.");
 				return false;
+			}
+
+			if(defaultTechnician == "") {
+				localStorage.defaultTechnician = inputValue;
 			}
 
 			$.ajax({
