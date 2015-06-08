@@ -43,7 +43,7 @@
 									<td><%= locations[i].line[j].started %></td>
 									<td>
 										<a href="#" class="btn btn-primary btn-sm action_buttons-start" id="action_button_start-<%= locations[i].location %>-<%= locations[i].line[j].ticketNumber %>" data-location="<%= locations[i].location %>" data-ticketNumber="<%= locations[i].line[j].ticketNumber %>"><span class="glyphicon glyphicon-triangle-right"></span>&nbsp;&nbsp;Start</a>
-										<a href="#" class="action_buttons-complete btn btn-success btn-sm" data-indexes="<%= i %>-<%= j %>"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Complete</a>
+										<a href="#" class="action_buttons-complete btn btn-success btn-sm" id="action_button_complete-<%= locations[i].location %>-<%= locations[i].line[j].ticketNumber %>" data-location="'<%= locations[i].location %>" data-ticketNumber="<%= locations[i].line[j].ticketNumber %>"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Complete</a>
 									</td>
 								</tr>
 							<% } %>

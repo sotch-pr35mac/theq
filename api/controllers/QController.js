@@ -9,6 +9,66 @@
 
 module.exports = {
 
+   removeByIndex: function(req, res) {
+      var post = req.body;
+      Q.findOne({ location: post.storeLocation }).exec(function(err, loc) {
+         if(err || loc == undefined) {
+            console.log("There was an error looking up the location: "+post.storeLocation);
+            console.log("Error = "+err);
+            res.serverError();
+         }
+         else {
+            for(var i = 0; i < loc.line.length; i++) {
+               if(loc.line[i].ticketNumber == post.ticketNumber) {
+                  loc.line.splice(i, 1);
+                  break;
+               }
+            }
+
+            loc.save(function(err) {
+               if(err) {
+                  console.log("There was an error saving location after removing an element from the line.");
+                  console.log("Error = "+err);
+                  res.serverError();
+               }
+               else {
+                  res.send({ success: true });
+               }
+            })
+         }
+      });
+   },
+
+   startRepair: function(req, res) {
+      var post = req.body;
+      Q.findOne({ location: post.storeLocation }).exec(function(err, loc) {
+         if(err || loc == undefined) {
+            console.log("There was an error looking up the location: "+post.storeLocation);
+            console.log("Error = "+err);
+            res.serverError();
+         }
+         else {
+            for(var i = 0; i < loc.line.length; i++) {
+               if(loc.line[i].ticketNumber == post.ticketNumber) {
+                  loc.line[i].started = post.startedBy;
+                  break;
+               }
+            }
+
+            loc.save(function(err) {
+               if(err) {
+                  console.log("There was an error saving the location after assigning technician.");
+                  console.log("Error = "+err);
+                  res.serverError();
+               }
+               else {
+                  res.send({ success: true });
+               }
+            });
+         }
+      });
+   },
+
    update: function(req, res) {
       var post = req.body;
       Q.findOne({ location: post.storeLocation }).exec(function(err, loc) {

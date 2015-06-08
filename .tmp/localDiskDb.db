@@ -3,60 +3,9 @@
     "q": [
       {
         "location": "Kalamazoo",
-        "line": [
-          {
-            "deviceMake": "lg",
-            "deviceModel": "g2",
-            "repairType": "water damage",
-            "repairLength": 4,
-            "ticketNumber": "",
-            "promiseTime": "2015/06/08 14:00",
-            "urgent": false,
-            "started": ""
-          },
-          {
-            "deviceMake": "lg",
-            "deviceModel": "g2",
-            "repairType": "water damage",
-            "repairLength": 4,
-            "ticketNumber": "",
-            "promiseTime": "2015/06/08 14:00",
-            "urgent": false,
-            "started": ""
-          },
-          {
-            "deviceMake": "Apple",
-            "deviceModel": "iphone 6+",
-            "repairType": "screen",
-            "repairLength": 1,
-            "ticketNumber": "",
-            "promiseTime": "2015/06/08 17:00",
-            "urgent": false,
-            "started": ""
-          },
-          {
-            "deviceMake": "Apple",
-            "deviceModel": "iphone 6+",
-            "repairType": "screen",
-            "repairLength": 1,
-            "ticketNumber": "",
-            "promiseTime": "2015/06/08 17:00",
-            "urgent": false,
-            "started": ""
-          },
-          {
-            "deviceMake": "test",
-            "deviceModel": "test",
-            "repairType": "test",
-            "repairLength": null,
-            "ticketNumber": "900000",
-            "promiseTime": "2015/06/08 18:00",
-            "urgent": false,
-            "started": ""
-          }
-        ],
+        "line": [],
         "createdAt": "2015-06-08T15:30:56.869Z",
-        "updatedAt": "2015-06-08T16:18:17.427Z",
+        "updatedAt": "2015-06-08T17:03:08.590Z",
         "id": 13
       }
     ]
