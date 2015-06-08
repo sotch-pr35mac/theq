@@ -7,4 +7,70 @@
 <div class="container">
 	<h1>View Line</h1>
 	<br>
+	<select class="form-control" id="locationSelect">
+		<option disabled selected value="inavlid">Select Location</option>
+		<% for(var i = 0; i < locations.length; i++) { %>
+			<option value="<%= i %>"><%= locations[i].location %></option>
+		<% } %>
+	</select>
+	<input type="text" style="display: none" id="placeholder" value="none">
+	<br>
+	<div id="the-q">
+		<% for(var i = 0; i < locations.length; i++) { %>
+			<div id="q-index-<%= i %>" style="display: none;">
+				<h3><%= locations[i].location %></h3>
+				<br>
+				<div class="panel panel-default">
+					<div class="panel-heading">The Q</div>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Ticket #</th>
+								<th>Device</th>
+								<th>Repair</th>
+								<th>Promise Time</th>
+								<th>Started by:</th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<% for(var j = 0; j < locations[i].line.length; j++) { %>
+								<tr>
+									<td><% if(locations[i].line[j].urgent == true) {%> <span class="label label-danger"><%= locations[i].line[j].ticketNumber %></span> <%} else {%> <span class="label label-default"><%= locations[i].line[j].ticketNumber %></span> <%}%></td>
+									<td><%= locations[i].line[j].deviceMake+" "+locations[i].line[j].deviceModel %></td>
+									<td><%= locations[i].line[j].repairType %></td>
+									<td><%= locations[i].line[j].promiseTime %></td>
+									<td><%= locations[i].line[j].started %></td>
+									<td>
+										<a href="#" class="btn btn-primary btn-small" data-toggle="modal" data-target="#action_start-<%= i %>-<%= j %>"><span class="glyphicon glyphicon-triangle-right"></span>&nbsp;Start</a>
+											<!-- The Modal Doesn't Work Right Now, but it will, it will soon. -->
+											<!-- <div class="modal fade" id="action_start-<%= i %>-<%= j %>" tabindex="-1" role="dialog" aria-labelledby="Start Repair" aria-hidden="true">
+												<div class="modal-dialog modal-lg">
+													<div class="modal-content">
+														<form>
+															<div class="form-group">
+																<label>Your Name or Initials</label>
+																<input type="text" class="form-control" id="technician-name-<%= i %>-<%= j %>">
+															</div>
+														</form>
+														<hr>
+														<div class="form-group">
+															<a href="#" class="btn btn-default pull-right action_start_repair" value="start-repair-<%= locations[i].location %>-<%= locations[i].line[j].ticketNumber %>">Start Repair</a>
+														</div>
+													</div>
+												</div>
+											</div> -->
+										<a href="#" class="action_buttons-complete btn btn-success btn-small" data-indexes="<%= i %>-<%= j %>"><span class="glyphicon glyphicon-ok"></span>&nbsp;Complete</a>
+									</td>
+								</tr>
+							<% } %>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		<% } %>
+	</div>
 </div>
+
+<!-- Loading Page-Only Scripts -->
+<script type="text/javascript" src="/js/home/line.js"></script>

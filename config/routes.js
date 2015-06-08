@@ -37,6 +37,11 @@ module.exports.routes = {
     action: 'index'
   },
 
+  'GET /index': {
+     controller: 'home',
+     action: 'index'
+  },
+
   'GET /q': {
      controller: 'home',
      action: 'line'
@@ -52,9 +57,13 @@ module.exports.routes = {
      action: 'updates'
   },
 
-  '/superuser/create': {
+  'POST /superuser/create': {
      controller: 'q',
      action: 'create'
+  },
+
+  'GET /superuser/create': {
+    view: 'superuser/create'
   },
 
   'POST /addItem': {

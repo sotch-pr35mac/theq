@@ -15,8 +15,7 @@ module.exports = {
      //The actual Queue, the line as it's called for the current location
      line: {
         type: 'array',
-        defaultTo: []
+        defaultsTo: []
      }
-
   }
 };

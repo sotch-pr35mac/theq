@@ -3,8 +3,8 @@
 <% include parts/navbar.ejs %>
 
 <!-- Load Page Dependencies Here -->
-<link rel="stylesheet" href="/styles/bootstrap-datetimepicker.css">
-<script type="text/javascript" src="/js/bootstrap-datetimepicker.js"></script>
+<link rel="stylesheet" href="/styles/jquery.datetimepicker.css">
+<script type="text/javascript" src="/js/jquery.datetimepicker.js"></script>
 
 <br>
 <br>
@@ -12,6 +12,13 @@
 <div class="container">
 	<h1>Add Item</h1>
 	<br>
+
+	<select class="form-control" id="storeLocation">
+		<option value="invalid" disabled selected>Select Location</option>
+		<% for(var i = 0; i < locations.length; i++) { %>
+			<option value="<%= locations[i].location %>"><%= locations[i].location %></option>
+		<% } %>
+	</select>
 
 	<h3>Device Details</h3>
 	<form>
@@ -43,14 +50,21 @@
 		</div>
 		<div class="form-group">
 			<label for="promiseTime">Promsie Time</label>
-			<div class="input-append date form_datetime" data-date="">
-				<input size="16" type="text" value="" readonly id="promisetime" name="promisetime">
-				<span class="add-on"><i class="icon-remove"></i></span>
-				<span class="add-on"><i class="icon-th"></i></span>
-			</div>
+			<br>
+			<input type="text" id="promisetime" name="promisetime"/>
+		</div>
+	</form>
+
+	<form>
+		<div class="form-group">
+			<a href="#" class="btn btn-default pull-left" id="addItem-Cancel">Cancel</a>
+			<a href="#" class="btn btn-info pull-right" id="addItem-Button">Add Item</a>
 		</div>
 	</form>
 </div>
+
+<br>
+<br>
 
 <!-- On Page Scripts Load Here -->
 <script type="text/javascript" src="/js/home/add.js"></script>

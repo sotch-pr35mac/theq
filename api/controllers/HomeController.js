@@ -13,7 +13,15 @@ module.exports = {
 	 * This function handles the page view request for `/add` and `/`, which is the add ticket page, and the home page
 	*/
 	index: function(req, res) {
-		res.view();
+		Q.find().exec(function(err, qs) {
+			if(err || qs == undefined) {
+				console.log("There was an issue looking up the Q's.");
+				res.serverError();
+			}
+			else {
+				res.view({ locations: qs });
+			}
+		});
 	},
 
 	/*
@@ -21,7 +29,98 @@ module.exports = {
 	*/
 	line: function(req, res) {
 		//Pass in some values here from the Q model
-		res.view();
+		Q.find().exec(function(err, locs) {
+			if(err || locs == undefined) {
+				console.log("There was an issue looking up the locations.");
+				res.serverError();
+			}
+			else {
+				for(var c = 0; c < locs.length; c++) {
+					var loc = locs[c];
+					function insertionSort(arr) {
+						var element;
+						var j;
+						var compVal;
+
+						for(var i = 1; i < arr.length; i++) {
+							element = arr[i];
+							compVal = arr[i].promiseTime;
+							j = i;
+
+							while(j > 0 && arr[j-1].promiseTime > compVal) {
+								arr[j] = arr[j-1]
+								j--;
+							}
+
+							arr[j] = element;
+						}
+
+						return arr;
+					}
+
+					var updatedLine = insertionSort(loc.line);
+
+					var rightNow = new Date();
+					var thisYear = rightNow.getFullYear();
+					var thisMonth = rightNow.getMonth();
+					var thisDay = rightNow.getDate();
+					var thisHour = rightNow.getHours();
+					var thisMinute = rightNow.getMinutes();
+
+					for(var i = 0; i < updatedLine.length; i++) {
+						var promisedDetail = updatedLine[i].promiseTime.split(" ");
+	               var promisedDateDetail = promisedDetail[0].split("/");
+	               var promisedTimeDetail = promisedDetail[1].split(":");
+	               promisedTimeDetail[1] = parseInt(promisedTimeDetail[1], 10);
+	               promisedTimeDetail[1] = promisedTimeDetail[1] + updatedLine[i].repairLength;
+	               var promisedYear = parseInt(promisedDateDetail[0]);
+	               var promisedMonth = parseInt(promisedDateDetail[1]);
+	               var promisedDay = parseInt(promisedDateDetail[2]);
+	               var promisedHour = parseInt(promisedTimeDetail[0]);
+	               var promisedMinute = parseInt(promisedTimeDetail[1]);
+
+						if(thisYear > promisedYear) {
+	                  updatedLine[i].urgent = true;
+							console.log("year");
+	               }
+	               else if(thisMonth > promisedMonth) {
+	                  updatedLine[i].urgent = true;
+							console.log("month");
+	               }
+	               else if(thisDay > promisedDay) {
+	                  updatedLine[i].urgent = true;
+							console.log("day");
+	               }
+						else if(thisDay == promisedDay) {
+							if(thisHour > promisedHour) {
+								updatedLine[i].urgent = true;
+							}
+							else if(thisMinute > promisedMinute) {
+								updatedLine[i].urgent = true;
+							}
+							else {
+								break;
+							}
+						}
+	               else {
+	                  break;
+	               }
+
+					}
+
+					loc.line = updatedLine;
+
+					loc.save(function(err) {
+						if(err) {
+							console.log("There was an error saving the updated line to the database.");
+							res.serverError();
+						}
+					});
+				}
+				console.log(locs);
+				res.view({ locations: locs });
+			}
+		});
 	},
 
 	/*
