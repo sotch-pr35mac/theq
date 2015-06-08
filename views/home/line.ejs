@@ -42,25 +42,8 @@
 									<td><%= locations[i].line[j].promiseTime %></td>
 									<td><%= locations[i].line[j].started %></td>
 									<td>
-										<a href="#" class="btn btn-primary btn-small" data-toggle="modal" data-target="#action_start-<%= i %>-<%= j %>"><span class="glyphicon glyphicon-triangle-right"></span>&nbsp;Start</a>
-											<!-- The Modal Doesn't Work Right Now, but it will, it will soon. -->
-											<!-- <div class="modal fade" id="action_start-<%= i %>-<%= j %>" tabindex="-1" role="dialog" aria-labelledby="Start Repair" aria-hidden="true">
-												<div class="modal-dialog modal-lg">
-													<div class="modal-content">
-														<form>
-															<div class="form-group">
-																<label>Your Name or Initials</label>
-																<input type="text" class="form-control" id="technician-name-<%= i %>-<%= j %>">
-															</div>
-														</form>
-														<hr>
-														<div class="form-group">
-															<a href="#" class="btn btn-default pull-right action_start_repair" value="start-repair-<%= locations[i].location %>-<%= locations[i].line[j].ticketNumber %>">Start Repair</a>
-														</div>
-													</div>
-												</div>
-											</div> -->
-										<a href="#" class="action_buttons-complete btn btn-success btn-small" data-indexes="<%= i %>-<%= j %>"><span class="glyphicon glyphicon-ok"></span>&nbsp;Complete</a>
+										<a href="#" class="btn btn-primary btn-sm action_buttons-start" id="action_button_start-<%= locations[i].location %>-<%= locations[i].line[j].ticketNumber %>" data-location="<%= locations[i].location %>" data-ticketNumber="<%= locations[i].line[j].ticketNumber %>"><span class="glyphicon glyphicon-triangle-right"></span>&nbsp;&nbsp;Start</a>
+										<a href="#" class="action_buttons-complete btn btn-success btn-sm" data-indexes="<%= i %>-<%= j %>"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Complete</a>
 									</td>
 								</tr>
 							<% } %>

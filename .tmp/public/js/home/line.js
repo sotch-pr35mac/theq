@@ -20,10 +20,16 @@ $(document).ready(function() {
 	});
 
 	//OnClickListeners
-	$("#action_buttons-start").click(function() {
-		
+	$(".action_buttons-start").click(function() {
+		var self = this;
+		var id = self.id;
+		var idDetails = id.split("-", 3);
+		var storeLocation = idDetails[1];
+		var ticketNumber = idDetails[2];
+		alert("store location: "+storeLocation);
+		alert("ticketNumber: "+ticketNumber);
 	});
-	$("#action_buttons-complete").click(function() {
+	$(".action_buttons-complete").click(function() {
 
 	});
 });
