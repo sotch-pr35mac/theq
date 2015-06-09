@@ -1,3 +1,5 @@
 # TheQ
 
-a [Sails](http://sailsjs.org) application
+A Virtual Line
+
+Making handling device repairs scheduling simple.
