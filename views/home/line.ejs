@@ -1,6 +1,13 @@
 <% include parts/dependencies.ejs %>
 <% include parts/navbar.ejs %>
 
+<!-- On Page Styles -->
+<style>
+	a:link, a:visited, a:hover {
+		color: white;
+	}
+</style>
+
 <br>
 <br>
 
@@ -36,7 +43,7 @@
 						<tbody>
 							<% for(var j = 0; j < locations[i].line.length; j++) { %>
 								<tr>
-									<td><% if(locations[i].line[j].urgent == true) {%> <span class="label label-danger"><%= locations[i].line[j].ticketNumber %></span> <%} else {%> <span class="label label-default"><%= locations[i].line[j].ticketNumber %></span> <%}%></td>
+									<td><% if(locations[i].line[j].urgent == true) {%> <span class="label label-danger"><a href="https://cpr-900191.repairq.io/ticket/<%= locations[i].line[j].ticketNumber %>" target="_blank"><%= locations[i].line[j].ticketNumber %></a></span> <%} else {%> <span class="label label-default"><a href="https://cpr-900191.repairq.io/ticket/<%= locations[i].line[j].ticketNumber %>" target="_blank"><%= locations[i].line[j].ticketNumber %></a></span> <%}%></td>
 									<td><%= locations[i].line[j].deviceMake+" "+locations[i].line[j].deviceModel %></td>
 									<td><%= locations[i].line[j].repairType %></td>
 									<td><%= locations[i].line[j].promiseTime %></td>
