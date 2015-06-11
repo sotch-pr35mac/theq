@@ -1,7 +1,7 @@
 {
   "name": "TheQ",
   "private": true,
-  "version": "1",
+  "version": "1.0.0",
   "description": "A Virtual Line",
   "keywords": [],
   "dependencies": {
