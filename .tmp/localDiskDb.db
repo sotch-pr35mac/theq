@@ -3,9 +3,30 @@
     "q": [
       {
         "location": "Kalamazoo",
-        "line": [],
+        "line": [
+          {
+            "deviceMake": "moto",
+            "deviceModel": "x",
+            "repairType": "loudspeaker",
+            "repairLength": 1,
+            "ticketNumber": "10006",
+            "promiseTime": "2015/06/10 22:00",
+            "urgent": true,
+            "started": ""
+          },
+          {
+            "deviceMake": "Apple",
+            "deviceModel": "iphone 5c",
+            "repairType": "screen",
+            "repairLength": 1,
+            "ticketNumber": "10002",
+            "promiseTime": "2015/06/11 10:00",
+            "urgent": true,
+            "started": ""
+          }
+        ],
         "createdAt": "2015-06-08T15:30:56.869Z",
-        "updatedAt": "2015-06-10T15:48:38.784Z",
+        "updatedAt": "2015-06-11T20:18:58.308Z",
         "id": 13
       }
     ]
