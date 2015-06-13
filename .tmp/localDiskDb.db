@@ -5,6 +5,16 @@
         "location": "Glen Ellyn",
         "line": [
           {
+            "deviceMake": "apple",
+            "deviceModel": "iphone 6",
+            "repairType": "JUST SUCKS",
+            "repairLength": null,
+            "ticketNumber": "100001",
+            "promiseTime": "2015/06/13 01:00",
+            "urgent": true,
+            "started": ""
+          },
+          {
             "deviceMake": "Nexus 6",
             "deviceModel": "123124124124",
             "repairType": "Sensor",
@@ -26,7 +36,7 @@
           }
         ],
         "createdAt": "2015-06-13T04:54:12.077Z",
-        "updatedAt": "2015-06-13T05:20:18.909Z",
+        "updatedAt": "2015-06-13T05:34:13.747Z",
         "id": 1
       }
     ]
