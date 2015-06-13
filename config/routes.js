@@ -99,6 +99,11 @@ module.exports.routes = {
   'GET /settings': {
      controller: 'home',
      action: 'minorSettings'
+  },
+
+  'GET /closerates': {
+     controller: 'home',
+     action: 'closes'
   }
 
   /***************************************************************************

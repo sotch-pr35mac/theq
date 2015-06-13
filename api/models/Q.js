@@ -22,6 +22,12 @@ module.exports = {
      alerts: {
         type: 'array',
         defaultsTo: []
+     },
+
+     //The array of close rates
+     closeRates: {
+        type: 'array',
+        defaultsTo: []
      }
   }
 };

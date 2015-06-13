@@ -270,7 +270,7 @@ module.exports = {
          console.log("There was an error with the chosen store Location.");
       }
       else {
-         Q.create({ location: storeLocation, line: [], alerts: [] }).exec(function(err, location) {
+         Q.create({ location: storeLocation, line: [], alerts: [], closeRate: [] }).exec(function(err, location) {
             if(err || location == undefined) {
                console.log("There was an error using the superuser function.");
                res.serverError();

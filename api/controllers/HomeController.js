@@ -157,6 +157,38 @@ module.exports = {
 	*/
 	updates: function(req, res) {
 		res.view();
+	},
+
+	/*
+	 * This function handles the page view requests for `/closerates`, which is the page where we keep track of close rates
+	*/
+	closes: function(req, res) {
+		Q.find().exec(function(err, locs) {
+			if(err || locs == undefined) {
+				console.log("There was an error looking up the locations in the database.");
+				console.log("Error = "+err);
+				res.serverError();
+			}
+			else {
+				for(var c = 0; c < locs.length; c++) {
+					var loc = locs[c];
+
+					if(loc.closeRates == undefined) {
+						loc.closeRates = [];
+
+						loc.save(function(err) {
+							if(err) {
+								console.log("There was an error saving the location "+loc.location+", after trying to initialize the close rates.");
+								console.log("Error = "+err);
+								res.serverError();
+							}
+						})
+					}
+				}
+
+				res.view('home/close_rates', {locations: locs});
+			}
+		});
 	}
 
 };
