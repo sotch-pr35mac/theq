@@ -16,6 +16,12 @@ module.exports = {
      line: {
         type: 'array',
         defaultsTo: []
+     },
+
+     //The array of store alerts
+     alerts: {
+        type: 'array',
+        defaultsTo: []
      }
   }
 };

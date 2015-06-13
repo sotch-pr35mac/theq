@@ -10,7 +10,14 @@
 module.exports = {
 
 	/*
-	 * This function handles the page view request for `/add` and `/`, which is the add ticket page, and the home page
+	 * This function handles the page view request for `/about`, which is the about page
+	*/
+	about: function(req, res) {
+		res.view();
+	},
+
+	/*
+	 * This function handles the page view request for `/add`, `/`, `/add/device`, which is the add ticket page, and the home page
 	*/
 	index: function(req, res) {
 		Q.find().exec(function(err, qs) {
@@ -22,6 +29,22 @@ module.exports = {
 				res.view({ locations: qs });
 			}
 		});
+	},
+
+	/*
+	 * This function handles the page view request for '/add/alert', which is the add alert page
+	*/
+	addAlert: function(req, res) {
+		Q.find().exec(function(err, qs) {
+			if(err || qs == undefined) {
+				console.log("There was an issue looking up the Q's.");
+				console.log("Error = "+err);
+				res.serverError();
+			}
+			else {
+				res.view('home/addAlert', { locations: qs });
+			}
+		})
 	},
 
 	/*
