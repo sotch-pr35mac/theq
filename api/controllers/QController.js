@@ -288,7 +288,7 @@ module.exports = {
 	*/
 	addAlert: function(req, res) {
 		var post = req.body;
-		$.findOne({ location: post.storeLocation }).exec(function(err, loc) {
+		Q.findOne({ location: post.storeLocation }).exec(function(err, loc) {
 			if(err || loc == undefined) {
 				console.log("There was an issue looking up the location "+post.storeLocation+" .");
 				console.log("Error = "+err);

@@ -60,6 +60,11 @@ module.exports = {
 			else {
 				for(var c = 0; c < locs.length; c++) {
 					var loc = locs[c];
+
+					if(loc.alerts == undefined) {
+						loc.alerts = [];
+					}
+
 					function insertionSort(arr) {
 						var element;
 						var j;

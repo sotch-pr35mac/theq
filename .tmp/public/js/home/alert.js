@@ -6,6 +6,8 @@
 */
 
 $(document).ready(function() {
+
+	//On Click Listeners
 	$("#addAlert-Button").click(function() {
 		var storeLocation = $("#storeLocation").val();
 		if(storeLocation == "invalid") {
@@ -17,7 +19,7 @@ $(document).ready(function() {
 
 			$.ajax({
 				type: 'POST',
-				url: '/home/add',
+				url: '/add/alert',
 				data: {
 					storeLocation: storeLocation,
 					alertText: alertText,
