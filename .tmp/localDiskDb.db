@@ -17,10 +17,6 @@
         ],
         "alerts": [
           {
-            "text": "Things",
-            "type": "danger"
-          },
-          {
             "text": "General information here",
             "type": "info"
           },
@@ -30,7 +26,7 @@
           }
         ],
         "createdAt": "2015-06-13T04:54:12.077Z",
-        "updatedAt": "2015-06-13T05:14:58.547Z",
+        "updatedAt": "2015-06-13T05:20:18.909Z",
         "id": 1
       }
     ]

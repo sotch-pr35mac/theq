@@ -9,18 +9,6 @@ body {
   height: 200px;
 }
 
-.navbar-theq .navbar-brand {
-  color: #fff;
-}
-
-.navbar-theq .navbar-header .brand-image {
-  margin-top: -10px;
-  padding-top: 0px;
-  margin-bottom: 10px;
-  height: 300%;
-  width: auto;
-}
-
 .navbar-header {
   color: #fff;
   margin-top: 0px;
@@ -35,6 +23,17 @@ body {
   background-color: #04a384;
 }
 
+.navbar-theq .navbar-brand {
+  color: #fff;
+}
+
+.navbar-theq .navbar-header .brand-image {
+  margin-top: -10px;
+  padding-top: 0px;
+  margin-bottom: 10px;
+  height: 300%;
+  width: auto;
+}
 
 .navbar-theq {
   background-color: #04a384;
@@ -156,6 +155,18 @@ body {
   border-radius: 0px;
 }
 
+.btn-white {
+  margin-top: -5px;
+  background-color: #fff;
+}
+
+.btn-white:hover {
+  color: #fff;
+  border-color: #fff;
+  border-width: 2px;
+  border-style: solid;
+}
+
 .btn-success:hover {
   background-color: #fff;
   color: #04a384;
@@ -164,11 +175,20 @@ body {
   border-color: #04a384;
 }
 
-.ticket-number {
+.ticket-number-danger {
   background-color: #c0392b;
   color: #fff;
   border-radius: 0px;
-  padding: 4px 4px 4px 4px;
+  padding: 5px 5px 5px 5px;
+  font-size: 12px;
+  margin: 10px 10px 10px 10px;
+}
+
+.ticket-number-normal {
+  background-color: #04a384;
+  color: #fff;
+  border-radius: 0px;
+  padding: 5px 5px 5px 5px;
   font-size: 12px;
   margin: 10px 10px 10px 10px;
 }
