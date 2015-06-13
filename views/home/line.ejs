@@ -33,7 +33,7 @@
 							<%= locations[i].alerts[a].text %>
 							&nbsp;
 							&nbsp;
-							<input type="button" class="btn btn-default btn-sm pull-right removeAlert-Button" value="Remove Alert" id="remove_alert-<%= locations[i].location %>-<%= a %>">
+							<input type="button" class="btn btn-white btn-sm pull-right removeAlert-Button" value="Remove Alert" id="remove_alert-<%= locations[i].location %>-<%= a %>">
 							<!-- <a href="#" class="removeAlert-Button pull-right" id="<%= a %>">Remove Alert</a> -->
 						</div>
 					<%}%>
@@ -55,7 +55,7 @@
 						<tbody>
 							<% for(var j = 0; j < locations[i].line.length; j++) { %>
 								<tr>
-									<td><% if(locations[i].line[j].urgent == true) {%> <span class="label label-danger"><a href="https://cpr-900191.repairq.io/ticket/<%= locations[i].line[j].ticketNumber %>" target="_blank"><%= locations[i].line[j].ticketNumber %></a></span> <%} else {%> <span class="label label-default"><a href="https://cpr-900191.repairq.io/ticket/<%= locations[i].line[j].ticketNumber %>" target="_blank"><%= locations[i].line[j].ticketNumber %></a></span> <%}%></td>
+									<td><% if(locations[i].line[j].urgent == true) {%><a class="ticket-number-danger" href="https://cpr-900191.repairq.io/ticket/<%= locations[i].line[j].ticketNumber %>" target="_blank"><%= locations[i].line[j].ticketNumber %></a> <%} else {%> <a class="ticket-number-normal" href="https://cpr-900191.repairq.io/ticket/<%= locations[i].line[j].ticketNumber %>" target="_blank"><%= locations[i].line[j].ticketNumber %></a><%}%></td>
 									<td><%= locations[i].line[j].deviceMake+" "+locations[i].line[j].deviceModel %></td>
 									<td><%= locations[i].line[j].repairType %></td>
 									<td><%= locations[i].line[j].promiseTime %></td>

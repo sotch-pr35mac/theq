@@ -1,0 +1,70 @@
+{
+  "data": {
+    "q": [
+      {
+        "location": "Glen Ellyn",
+        "line": [
+          {
+            "deviceMake": "Nexus 6",
+            "deviceModel": "123124124124",
+            "repairType": "Sensor",
+            "repairLength": 2,
+            "ticketNumber": "123123",
+            "promiseTime": "2015/06/20 03:00",
+            "urgent": false,
+            "started": ""
+          }
+        ],
+        "alerts": [
+          {
+            "text": "Things",
+            "type": "danger"
+          },
+          {
+            "text": "General information here",
+            "type": "info"
+          },
+          {
+            "text": "Good news!",
+            "type": "success"
+          }
+        ],
+        "createdAt": "2015-06-13T04:54:12.077Z",
+        "updatedAt": "2015-06-13T05:10:43.413Z",
+        "id": 1
+      }
+    ]
+  },
+  "schema": {
+    "q": {
+      "location": {
+        "type": "string"
+      },
+      "line": {
+        "type": "array",
+        "defaultsTo": []
+      },
+      "alerts": {
+        "type": "array",
+        "defaultsTo": []
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "q": {
+      "id": 1
+    }
+  }
+}
