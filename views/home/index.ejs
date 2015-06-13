@@ -4,10 +4,7 @@
 
 <!-- Load Page Dependencies Here -->
 <link rel="stylesheet" href="/styles/jquery.datetimepicker.css">
-<link href="/styles/gsdk-base.css" rel="stylesheet" />
 <script type="text/javascript" src="/js/jquery.datetimepicker.js"></script>
-<script type="text/javascript" src="/js/jquery.bootstrap.wizard.js"></script>
-
 
 <br>
 <br>
@@ -15,6 +12,7 @@
 <div class="container">
 	<h1>Add Item</h1>
 	<br>
+
 	<select class="form-control" id="storeLocation">
 		<option value="invalid" disabled selected>Select Location</option>
 		<% for(var i = 0; i < locations.length; i++) { %>
@@ -22,75 +20,48 @@
 		<% } %>
 	</select>
 
-	<div class="row">
-		<div class="col-sm-8 col-sm-offset-2">
-
-			<!-- Wizard container -->
-			<div class="wizard-container">
-				<form action="" method="">
-					<div class="card wizard-card ct-wizard-green" id="wizard">
-							<div class="wizard-header">
-								<h3>
-									<b>ADD DEVICE</b> <br>
-									<small>Add all details relevant to the work order</small>
-								</h3>
-							</div>
-							<ul>
-									<li><a href="#deviceDetails" data-toggle="tab">Device Details</a></li>
-									<li><a href="#otherDetails" data-toggle="tab">Other Details</a></li>
-							</ul>
-							<div class="tab-content">
-									<div class="tab-pane" id="deviceDetails">
-										<div class="row">
-												<h4 class="info-text">Basic Device Information</h4>
-												<div class="col-lg-12">
-													<div class="form-group">
-														<label for="deviceMake">Device Make</label>
-														<input type="text" id="deviceMake" name="deviceMake" class="form-control" placeholder="Device Make">
-													</div>
-													<div class="form-group">
-														<label for="deviceModel">Device Model</label>
-														<input type="text" id="deviceModel" name="deviceModel" class="form-control" placeholder="Device Model">
-													</div>
-													<div class="form-group">
-														<label for="repairType">Repair Type</label>
-														<input type="text" id="repairType" name="repairType" class="form-control" placeholder="Repair Type">
-													</div>
-													<div class="form-group">
-														<label for="repairLength">Repair Length (in hours)</label>
-														<input type="number" id="repairLength" name="repairLength" class="form-control" placeholder="1">
-													</div>
-												</div>
-										</div>
-									</div>
-									<div class="tab-pane" id="otherDetails">
-										<h4 class="info-text">Add Other Information</h4>
-										<div class="form-group">
-											<label for="ticketNumber">Ticket Number</label>
-											<input type="number" id="ticketNumber" name="ticketNumber" class="form-control" placeholder="9861">
-										</div>
-										<div class="form-group">
-											<label for="promiseTime">Promsie Time</label>
-											<br>
-											<input type="text" id="promisetime" name="promisetime"/>
-										</div>
-									</div>
-							</div>
-							<div class="wizard-footer">
-								<div class="pull-right">
-									<input type='button' class='btn btn-next btn-fill btn-warning btn-wd btn-sm' name='next' value='Next' />
-									<input type='button' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='finish' value='Finish' />
-								</div>
-								<div class="pull-left">
-									<input type='button' class='btn btn-previous btn-fill btn-default btn-wd btn-sm' name='previous' value='Previous' />
-								</div>
-								<div class="clearfix"></div>
-						</div>
-					</div>
-				</form>
-			</div>
+	<h3>Device Details</h3>
+	<form>
+		<div class="form-group">
+			<label for="deviceMake">Device Make</label>
+			<input type="text" id="deviceMake" name="deviceMake" class="form-control" placeholder="Device Make">
 		</div>
-	</div>
+		<div class="form-group">
+			<label for="deviceModel">Device Model</label>
+			<input type="text" id="deviceModel" name="deviceModel" class="form-control" placeholder="Device Model">
+		</div>
+		<div class="form-group">
+			<label for="repairType">Repair Type</label>
+			<input type="text" id="repairType" name="repairType" class="form-control" placeholder="Repair Type">
+		</div>
+		<div class="form-group">
+			<label for="repairLength">Repair Length (in hours)</label>
+			<input type="number" id="repairLength" name="repairLength" class="form-control" placeholder="1">
+		</div>
+	</form>
+
+	<br>
+
+	<h3>Other Details</h3>
+	<form>
+		<div class="form-group">
+			<label for="ticketNumber">Ticket Number</label>
+			<input type="number" id="ticketNumber" name="ticketNumber" class="form-control" placeholder="9861">
+		</div>
+		<div class="form-group">
+			<label for="promiseTime">Promsie Time</label>
+			<br>
+			<input type="text" id="promisetime" name="promisetime"/>
+		</div>
+	</form>
+
+	<form>
+		<div class="form-group">
+			<a href="#" class="btn btn-default pull-left" id="addItem-Cancel">Cancel</a>
+			<a href="#" class="btn btn-info pull-right" id="addItem-Button">Add Item</a>
+		</div>
+	</form>
+</div>
 
 <br>
 <br>
@@ -107,4 +78,3 @@
 		}
 	});
 </script>
-<script src="/js/wizard.js"></script>
