@@ -94,6 +94,11 @@ module.exports.routes = {
   'POST /remove/alert': {
      controller: 'q',
      action: 'removeAlert'
+  },
+
+  'GET /settings': {
+     controller: 'home',
+     action: 'minorSettings'
   }
 
   /***************************************************************************

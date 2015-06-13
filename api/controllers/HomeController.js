@@ -10,6 +10,13 @@
 module.exports = {
 
 	/*
+	 * This function handles the page view request for `/settings`, which is the settings page that allows you to clear defaults
+	*/
+	minorSettings: function(req, res) {
+		res.view('home/settings');
+	},
+
+	/*
 	 * This function handles the page view request for `/about`, which is the about page
 	*/
 	about: function(req, res) {
