@@ -21,6 +21,21 @@ body {
   width: auto;
 }
 
+.navbar-header {
+  color: #fff;
+  margin-top: 0px;
+  background-color: #04a384;
+}
+
+.navbar-toggle {
+  color: #fff;
+}
+
+.container-fluid > .navbar-collapse, .container-fluid > .navbar-header, .container > .navbar-collapse, .container > .navbar-header {
+  background-color: #04a384;
+}
+
+
 .navbar-theq {
   background-color: #04a384;
   height: auto;
