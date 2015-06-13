@@ -19,6 +19,10 @@ body {
   color: #fff;
 }
 
+.navbar-nav > li > .dropdown-menu, .dropdown-menu {
+  border-radius: 0px;
+}
+
 .container-fluid > .navbar-collapse, .container-fluid > .navbar-header, .container > .navbar-collapse, .container > .navbar-header {
   background-color: #04a384;
 }
