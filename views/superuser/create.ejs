@@ -1,31 +1,35 @@
-Store Location: <input type="text" id="storeLocation">
-<br>
+<div class="container">
+	<div class="row">
+		Store Location: <input type="text" id="storeLocation">
+		<br>
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.js"></script>
 
-<a href="#" id="create-button">Create</a>
+		<a href="#" id="create-button">Create</a>
 
-<script type="text/javascript">
-	$("#create-button").click(function() {
-		var storeLocation = $("#storeLocation").val();
-		$.ajax({
-			type: 'POST',
-			url: '/superuser/create/',
-			data: {
-				storeLocation: storeLocation
-			},
-			success: function(data) {
-				if(data.success == true) {
-					alert("Created was a success.");
-					window.location.href = "/add";
-				}
-				else {
-					alert("The addition of a store location failed.");
-				}
-			},
-			error: function(data) {
-				alert("The addition of a store location failed.");
-			}
-		})
-	});
-</script>
+		<script type="text/javascript">
+			$("#create-button").click(function() {
+				var storeLocation = $("#storeLocation").val();
+				$.ajax({
+					type: 'POST',
+					url: '/superuser/create/',
+					data: {
+						storeLocation: storeLocation
+					},
+					success: function(data) {
+						if(data.success == true) {
+							alert("Created was a success.");
+							window.location.href = "/add";
+						}
+						else {
+							alert("The addition of a store location failed.");
+						}
+					},
+					error: function(data) {
+						alert("The addition of a store location failed.");
+					}
+				})
+			});
+		</script>
+		</div>
+</div>
