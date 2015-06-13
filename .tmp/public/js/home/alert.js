@@ -19,7 +19,7 @@ $(document).ready(function() {
 
 			$.ajax({
 				type: 'POST',
-				url: '/home/add',
+				url: '/add/alert',
 				data: {
 					storeLocation: storeLocation,
 					alertText: alertText,
@@ -40,9 +40,5 @@ $(document).ready(function() {
 				}
 			});
 		}
-	});
-
-	$("#removeAlert-Button").click(function() {
-
 	});
 });

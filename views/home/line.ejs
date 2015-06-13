@@ -22,44 +22,23 @@
 	</select>
 	<input type="text" style="display: none" id="placeholder" value="none">
 	<br>
-	<!-- <div id="the-q">
-		<!-- <% for(var i = 0; i < locations.length; i++) { %>
-			<h3><%= locations[i].location %></h3>
-			<% for(var j = 0; j < locations[i].line.length; j++) { %>
-				<% if(i % 2 == 0) { %>
-					<div class="row">
-				<% } %>
-				<div class="col-lg-6">
-					<div class="line-tile">
-						<div class="panel panel-line">
-							<div class="panel-heading">
-								<h4 class="repair-type"><%= locations[i].line[j].repairType %><a class="ticket-number pull-right" href="https://cpr-900191.repairq.io/ticket/<%= locations[i].line[j].ticketNumber %>" target="_blank"><%= locations[i].line[j].ticketNumber %></a></h4>
-								</div>
-							<div class="panel-body">
-								<h4 class="device-name">Device Model: <span class="text-colored"><%= locations[i].line[j].deviceModel %></span></h4>
-								<h5 class="started-by">Started by: <%= locations[i].line[j].started %><h5>
-								<p>Promise Time: <strong><%= locations[i].line[j].promiseTime %></strong><p>
-								<br />
-								<div class="row">
-										<div class="col-lg-6">
-											<a href="#" class="btn btn-primary btn-md action_buttons-start btn-block" id="action_button_start-<%= locations[i].location %>-<%= locations[i].line[j].ticketNumber %>" data-location="<%= locations[i].location %>" data-ticketNumber="<%= locations[i].line[j].ticketNumber %>"><span class="glyphicon glyphicon-triangle-right"></span>&nbsp;&nbsp;Start</a>
-										</div>
-										<div class="col-lg-6">
-											<a href="#" class="action_buttons-complete btn btn-success btn-md btn-block" id="action_button_complete-<%= locations[i].location %>-<%= locations[i].line[j].ticketNumber %>" data-location="'<%= locations[i].location %>" data-ticketNumber="<%= locations[i].line[j].ticketNumber %>"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Complete</a>
-										</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<% if(i % 2 != 0) { %>
-					</div>
-				<% } %>
-			<% } %> -->
-
-			<div class="q" id="q-index-<%= i %>" style="display: none;">
+	<div id="the-q">
+		<% for(var i = 0; i < locations.length; i++) { %>
+			<div id="q-index-<%= i %>" style="display: none;">
 				<h3><%= locations[i].location %></h3>
 				<br>
+				<% if(locations[i].alerts.length > 0) {%>
+					<% for(var a = 0; a < locations[i].alerts.length; a++) {%>
+						<div class="alert alert-<%=locations[i].alerts[a].type %>" role="alert">
+							<%= locations[i].alerts[a].text %>
+							&nbsp;
+							&nbsp;
+							<input type="button" class="btn btn-default btn-sm pull-right removeAlert-Button" value="Remove Alert" id="remove_alert-<%= locations[i].location %>-<%= a %>">
+							<!-- <a href="#" class="removeAlert-Button pull-right" id="<%= a %>">Remove Alert</a> -->
+						</div>
+					<%}%>
+					<br>
+				<%}%>
 				<div class="panel panel-default">
 					<div class="panel-heading">The Q</div>
 					<table class="table">
@@ -76,7 +55,7 @@
 						<tbody>
 							<% for(var j = 0; j < locations[i].line.length; j++) { %>
 								<tr>
-									<td><a class="ticket-number" href="https://cpr-900191.repairq.io/ticket/<%= locations[i].line[j].ticketNumber %>" target="_blank"><%= locations[i].line[j].ticketNumber %></a></td>
+									<td><% if(locations[i].line[j].urgent == true) {%> <span class="label label-danger"><a href="https://cpr-900191.repairq.io/ticket/<%= locations[i].line[j].ticketNumber %>" target="_blank"><%= locations[i].line[j].ticketNumber %></a></span> <%} else {%> <span class="label label-default"><a href="https://cpr-900191.repairq.io/ticket/<%= locations[i].line[j].ticketNumber %>" target="_blank"><%= locations[i].line[j].ticketNumber %></a></span> <%}%></td>
 									<td><%= locations[i].line[j].deviceMake+" "+locations[i].line[j].deviceModel %></td>
 									<td><%= locations[i].line[j].repairType %></td>
 									<td><%= locations[i].line[j].promiseTime %></td>
