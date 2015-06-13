@@ -6,6 +6,8 @@
 */
 
 $(document).ready(function() {
+
+	//On Click Listeners
 	$("#addAlert-Button").click(function() {
 		var storeLocation = $("#storeLocation").val();
 		if(storeLocation == "invalid") {
@@ -38,5 +40,9 @@ $(document).ready(function() {
 				}
 			});
 		}
+	});
+
+	$("#removeAlert-Button").click(function() {
+
 	});
 });
