@@ -137,4 +137,44 @@ $(document).ready(function() {
 			}
 		});
 	});
+
+	$(".removeAlert-Button").click(function() {
+		var self = this;
+		var locationIndex = $("#locationSelect").val();
+		var storeLocation = document.getElementById("locationSelect").options[locationIndex].text;
+
+		if(storeLocation == "invalid" || storeLocation == undefined) {
+			alert("Please select a location.");
+		}
+		else {
+			var alertIndex = self.id;
+			var id = self.id;
+			var idDetails = id.split("-", 3);
+			var storeLocation = idDetails[1];
+			var alertIndex = idDetails[2];
+
+			$.ajax({
+				type: 'POST',
+				url: '/remove/alert',
+				data: {
+					storeLocation: storeLocation,
+					alertIndex: alertIndex
+				},
+				success: function(data) {
+					if(data.success == true) {
+						swal("Woo!", "Alert successfully deleted.", "success");
+						window.location.reload();
+					}
+					else {
+						console.log(data);
+						swal("Uh-oh!", "Could not remove alert due to an unknown error.", "error");
+					}
+				},
+				error: function(data) {
+					console.log(data);
+					swal("Uh-oh!", "Could not remove alert due to an unknown error.", "error");
+				}
+			});
+		}
+	});
 });

@@ -1,3 +1,12 @@
+<!-- Navbar relevant styles -->
+<style>
+	@media (min-width: 970px) {
+		ul.nav li.dropdown:hover > ul.dropdown-menu {
+			display: block;
+		}
+	}
+</style>
+
 <nav class="navbar navbar-default">
 	<div class="container-fluid">
 		<div class="navbar-header">
@@ -15,21 +24,24 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Add<span class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="/add">Device</a></li>
+						<li><a href="/add/device">Device</a></li>
 						<li class="divider"></li>
-						<li><a href="#" id="alert_alerts-not-working">Alert</a></li>
+						<li><a href="/add/alert">Alert</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aira-expanded="false"><span class="glyphicon glyphicon-zoom-in"></span>&nbsp;&nbsp;View<span class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu">
 						<li><a href="/q">Line</a></li>
-						<li><a href="/updates">Planned Updates</a></li>
 						<li class="divider"></li>
-						<li><a href="https://cpr-900191.repairq.io/site/login">RepairQ</a></li>
+						<li><a href="https://cpr-900191.repairq.io/site/login" target="_blank">RepairQ</a></li>
+						<li><a href="http://stosur.info/requestr/" target="_blank">Estimate Requests</a></li>
+						<li class="divider"></li>
+						<li><a href="/updates">Planned Updates</a></li>
+						<li><a href="/about">About</a></li>
 					</ul>
 				</li>
-				<li><a href="http://stosur.info/requestr/">Estimate Requests</a></li>
+				<li><a href="/settings"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp; Settings</a></li>
 			</ul>
 		</div>
 	</div>
@@ -38,9 +50,6 @@
 <!-- Navbar relevent scrips -->
 <script type="text/javascript">
 	$(document).ready(function() {
-		//Onclick Event Listeners
-		$("#alert_alerts-not-working").click(function() {
-			swal("Feature Not Available", "Alerts are not available in this build.", "error");
-		});
+		//No navbar relevant client side javascript required.
 	});
 </script>

@@ -26,8 +26,9 @@
           }
         ],
         "createdAt": "2015-06-08T15:30:56.869Z",
-        "updatedAt": "2015-06-11T20:18:58.308Z",
-        "id": 13
+        "updatedAt": "2015-06-13T03:47:24.834Z",
+        "id": 13,
+        "alerts": []
       }
     ]
   },
@@ -37,6 +38,10 @@
         "type": "string"
       },
       "line": {
+        "type": "array",
+        "defaultsTo": []
+      },
+      "alerts": {
         "type": "array",
         "defaultsTo": []
       },

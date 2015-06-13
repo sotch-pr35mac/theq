@@ -1,0 +1,54 @@
+<% include parts/dependencies.ejs %>
+<% include parts/navbar.ejs %>
+
+<br>
+<br>
+
+<div class="container">
+	<h1>Add Alert</h1>
+	<p>Alerts are store wide for the selected location and will appear right above the queue on the <a href="/q">View Line</a> page.</p>
+	<br>
+	<select class="form-control" id="storeLocation">
+		<option value="invalid" disabled selected>Select Locaion</option>
+		<% for(var i = 0; i < locations.length; i++) {%>
+			<option value="<%= locations[i].location %>"><%= locations[i].location %></option>
+		<%}%>
+	</select>
+	<br>
+	<form>
+		<div class="form-group">
+			<label for="alert-text">Alert</label>
+			<textarea id="alert-text" name="alert-text" class="form-control" placeholder="Heads up about..."></textarea>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="alert-type">Alert Type</label>
+			<select class="form-control" id="alert-type" name="alert-type">
+				<option value="info">General Information</option>
+				<option value="danger">Urgent</option>
+				<option value="warning">Important</option>
+				<option value="success">Good News</option>
+			</select>
+		</div>
+		<br>
+		<div class="form-group">
+			<a href="#" class="btn btn-success pull-right" id="addAlert-Button">Add Alert</a>
+		</div>
+	</form>
+</div>
+
+<br>
+<br>
+
+<!-- On Page Scripts Load Here -->
+<script type="text/javascript" src="/js/home/alert.js"></script>
+
+<script type="text/javascript">
+	//Pre-Load functions
+	$(document).ready(function() {
+		//Load some default values to speed up the process a bit
+		if(localStorage.storeLocation != null || localStorage.storeLocation != undefined) {
+			$("#storeLocation").val(localStorage.storeLocation);
+		}
+	});
+</script>

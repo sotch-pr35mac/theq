@@ -52,6 +52,11 @@ module.exports.routes = {
      action: 'index'
   },
 
+  'GET /add/device': {
+     controller: 'home',
+     action: 'index'
+  },
+
   'GET /updates': {
      controller: 'home',
      action: 'updates'
@@ -69,6 +74,31 @@ module.exports.routes = {
   'POST /addItem': {
      controller: 'q',
      action: 'add'
+  },
+
+  'GET /about': {
+     controller: 'home',
+     action: 'about'
+  },
+
+  'GET /add/alert': {
+     controller: 'home',
+     action: 'addAlert'
+  },
+
+  'POST /add/alert': {
+     controller: 'q',
+     action: 'addAlert'
+  },
+
+  'POST /remove/alert': {
+     controller: 'q',
+     action: 'removeAlert'
+  },
+
+  'GET /settings': {
+     controller: 'home',
+     action: 'minorSettings'
   }
 
   /***************************************************************************

@@ -27,6 +27,18 @@
 			<div id="q-index-<%= i %>" style="display: none;">
 				<h3><%= locations[i].location %></h3>
 				<br>
+				<% if(locations[i].alerts.length > 0) {%>
+					<% for(var a = 0; a < locations[i].alerts.length; a++) {%>
+						<div class="alert alert-<%=locations[i].alerts[a].type %>" role="alert">
+							<%= locations[i].alerts[a].text %>
+							&nbsp;
+							&nbsp;
+							<input type="button" class="btn btn-default btn-sm pull-right removeAlert-Button" value="Remove Alert" id="remove_alert-<%= locations[i].location %>-<%= a %>">
+							<!-- <a href="#" class="removeAlert-Button pull-right" id="<%= a %>">Remove Alert</a> -->
+						</div>
+					<%}%>
+					<br>
+				<%}%>
 				<div class="panel panel-default">
 					<div class="panel-heading">The Q</div>
 					<table class="table">

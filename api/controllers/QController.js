@@ -34,7 +34,7 @@ module.exports = {
                else {
                   res.send({ success: true });
                }
-            })
+            });
          }
       });
    },
@@ -270,7 +270,7 @@ module.exports = {
          console.log("There was an error with the chosen store Location.");
       }
       else {
-         Q.create({ location: storeLocation, line: [] }).exec(function(err, location) {
+         Q.create({ location: storeLocation, line: [], alerts: [] }).exec(function(err, location) {
             if(err || location == undefined) {
                console.log("There was an error using the superuser function.");
                res.serverError();
@@ -281,6 +281,76 @@ module.exports = {
             }
          });
       }
-   }
+   },
+
+   /*
+	 * This function handles the logic for adding an alert to a specific location
+	*/
+	addAlert: function(req, res) {
+		var post = req.body;
+		Q.findOne({ location: post.storeLocation }).exec(function(err, loc) {
+			if(err || loc == undefined) {
+				console.log("There was an issue looking up the location "+post.storeLocation+" .");
+				console.log("Error = "+err);
+				res.serverError();
+			}
+			else {
+				if(loc.alerts == undefined) {
+					loc.alerts = [];
+
+				}
+
+				var alertsLength = loc.alerts.length;
+				var alertData = {
+					text: post.alertText,
+					type: post.alertType
+				};
+
+				loc.alerts[alertsLength] = alertData;
+
+				loc.save(function(err) {
+					if(err) {
+						console.log("There was an error saving the alert to the location.");
+						console.log("Error = "+err);
+						res.serverError();
+					}
+					else {
+						res.send({ success: true});
+					}
+				});
+			}
+		});
+	},
+
+	/*
+	 * This function handles the logic for removing an alert from a given location
+	*/
+	removeAlert: function(req, res) {
+		var post = req.body;
+		Q.findOne({ location: post.storeLocation }).exec(function(err, loc) {
+			if(err || loc == undefined) {
+				console.log("There was an error looking up the location "+post.storeLocation+" .");
+				console.log("Error = "+err);
+				res.serverError();
+			}
+			else {
+				var storeLocation = post.storeLocation;
+				var alertIndex = post.alertIndex;
+
+            loc.alerts.splice(alertIndex, 1);
+
+            loc.save(function(err) {
+               if(err) {
+                  console.log("There was an error saving location after removing alert.");
+                  console.log("Error = "+err);
+                  res.serverError();
+               }
+               else {
+                  res.send({ success: true });
+               }
+            });
+			}
+		});
+	}
 
 };
