@@ -114,7 +114,12 @@ module.exports.routes = {
   'GET /login': {
     controller: 'home',
     action: 'login'
-  }
+  },
+
+  'GET /signup': {
+    controller: 'home',
+    action: 'signup'
+  },
 
   /***************************************************************************
    *                                                                          *

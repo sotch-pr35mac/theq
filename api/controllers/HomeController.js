@@ -201,4 +201,24 @@ module.exports = {
     res.view('home/login');
   },
 
+  signup: function(req, res) {
+    //Pass in some values here from the Q model
+    Q.find().exec(function(err, locs) {
+      if (err || locs == undefined) {
+        console.log("There was an issue looking up the locations.");
+        res.serverError();
+      } else {
+        for (var c = 0; c < locs.length; c++) {
+          var loc = locs[c];
+
+        }
+        console.log(locs);
+        res.view({
+          locations: locs
+        });
+      }
+    });
+
+  },
+
 };
