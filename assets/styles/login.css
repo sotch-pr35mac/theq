@@ -7,6 +7,7 @@ body {
 .branding {
   width: 300px;
   height: auto;
+  text-align: center;
 }
 
 .box {
@@ -18,9 +19,10 @@ body {
   border-radius: 5px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   padding-top: 20px;
 }
+
 
 .box h1 {
   text-align: center;
@@ -34,4 +36,12 @@ body {
 .box label {
   color: #000;
   text-align: left;
+}
+
+.box .input-group {
+  margin-top: 15px;
+}
+
+.box button {
+  margin-top: 30px;
 }

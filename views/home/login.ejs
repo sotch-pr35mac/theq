@@ -1,27 +1,30 @@
 <% include parts/dependencies.ejs %>
 <link rel="stylesheet" href="/styles/login.css">
 <div class="container">
-  <div class="row">
-    <center>
+  <center>
+    <div class="row">
       <img class="branding" src="/images/theq-white.png">
+    </div>
+    <div class="row">
       <div class="box">
-        <h1>Login</h1>
+        <div class="row">
+          <h1>Login</h1>
+        </div>
         <form>
           <div class="form-group">
             <div class="input-group">
+              <div class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></div>
               <input type="email" class="form-control" id="email" placeholder="Email">
               <div class="input-group-addon">@location-cpr.com</div>
             </div>
-          </div>
-        </form>
-        <form>
-          <div class="form-group">
             <div class="input-group">
-              <input type="password" class="form-control" id="exampleInputAmount" placeholder="password">
+              <div class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></div>
+              <input type="password" class="form-control" id="password" placeholder="Password">
             </div>
           </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
         </form>
       </div>
-    </center>
-  </div>
+    </div>
+  </center>
 </div>
