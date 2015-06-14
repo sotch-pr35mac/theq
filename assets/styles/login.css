@@ -49,3 +49,15 @@ body {
 .box button {
   margin-top: 30px;
 }
+
+.box footer {
+  margin-top: 30px;
+  padding-top: 0px;
+  border-top-color: #d3d3d3;
+  border-top-style: solid;
+  border-top-width: 2px;
+}
+
+.box footer h3 {
+  font-size: 20px;
+}

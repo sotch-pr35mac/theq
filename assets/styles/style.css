@@ -150,6 +150,37 @@ body {
   border-radius: 0px;
 }
 
+.btn-default:hover {
+  background-color: #fff;
+  color: #3498db;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #3498db;
+}
+
+.btn-default {
+  background-color: #3498db;
+  border-color: #3498db;
+  color: #fff;
+  border-radius: 0px;
+}
+
+.btn-warning:hover {
+  background-color: #fff;
+  color: #f1c40f;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #f1c40f;
+}
+
+.btn-warning {
+  background-color: #f1c40f;
+  border-color: #f1c40f;
+  color: #fff;
+  border-radius: 0px;
+}
+
+
 .btn-danger:hover {
   background-color: #fff;
   color: #c0392b;
