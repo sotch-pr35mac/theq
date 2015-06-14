@@ -109,6 +109,11 @@ module.exports.routes = {
   'GET /closerates': {
     controller: 'home',
     action: 'closes'
+  },
+
+  'GET /login': {
+    controller: 'home',
+    action: 'login'
   }
 
   /***************************************************************************

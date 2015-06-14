@@ -195,6 +195,10 @@ module.exports = {
         });
       }
     });
-  }
+  },
+
+  login: function(req, res) {
+    res.view('home/login');
+  },
 
 };

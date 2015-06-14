@@ -1,0 +1,38 @@
+body {
+  background-color: #04a384;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 30px;
+}
+
+.branding {
+  width: 300px;
+  height: auto;
+}
+
+.box {
+  margin-top: 10px;
+  color: #000;
+  background-color: #F7EFEF;
+  width: 450px;
+  height: auto;
+  border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
+
+.box h1 {
+  text-align: center;
+  font-weight: 300;
+  color: #04a384;
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+
+.box label {
+  color: #000;
+  text-align: left;
+}
