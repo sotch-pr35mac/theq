@@ -3,6 +3,7 @@
  */
  body {
    font-family: 'Open Sans', sans-serif;
+   background-color: #eeeeee;
  }
 
 /*
@@ -88,7 +89,7 @@
 
 .main {
   padding: 20px;
-  background-color: #fff;
+  background-color: #eeeeee;
 }
 @media (min-width: 768px) {
   .main {
@@ -123,4 +124,8 @@
 .holder {
   background-color: #fff;
   border-radius: 5px;
+  padding-top: 3px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 3px;
 }
