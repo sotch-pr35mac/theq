@@ -55,6 +55,10 @@
   margin-left: -20px;
 }
 
+.nav-sidebar i {
+  margin-right: 10px;
+}
+
 .nav-sidebar .active {
   background-color: #fff;
   color: #04a384;

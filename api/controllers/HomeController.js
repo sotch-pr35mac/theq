@@ -224,6 +224,14 @@ module.exports = {
 
   landing: function(req, res) {
     res.view('home/landing');
-  }
+  },
+
+  managerDashboard: function(req, res) {
+    res.view('manager/dashboard');
+  },
+
+  managerSettings: function(req, res) {
+    res.view('manager/settings');
+  },
 
 };

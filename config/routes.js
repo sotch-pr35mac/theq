@@ -131,6 +131,17 @@ module.exports.routes = {
     action: 'landing'
   },
 
+  'GET /manager/dashboard': {
+    controller: 'home',
+    action: 'managerDashboard'
+  },
+
+  'GET /manager/settings': {
+    controller: 'home',
+    action: 'managerSettings'
+  },
+
+
   /***************************************************************************
    *                                                                          *
    * Custom routes here...                                                    *
