@@ -1,8 +1,8 @@
 {
   "name": "TheQ",
   "private": true,
-  "version": "1.0.4",
-  "description": "A Virtual Line",
+  "version": "1.1.0",
+  "description": "Manage, track, and analyze your repairs easily with TheQ",
   "keywords": [],
   "dependencies": {
     "ejs": "~0.8.4",
