@@ -23,14 +23,14 @@
 module.exports.routes = {
 
   /***************************************************************************
-  *                                                                          *
-  * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
-  * etc. depending on your default view engine) your home page.              *
-  *                                                                          *
-  * (Alternatively, remove this and add an `index.html` file in your         *
-  * `assets` directory)                                                      *
-  *                                                                          *
-  ***************************************************************************/
+   *                                                                          *
+   * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
+   * etc. depending on your default view engine) your home page.              *
+   *                                                                          *
+   * (Alternatively, remove this and add an `index.html` file in your         *
+   * `assets` directory)                                                      *
+   *                                                                          *
+   ***************************************************************************/
 
   'GET /': {
     controller: 'home',
@@ -38,33 +38,38 @@ module.exports.routes = {
   },
 
   'GET /index': {
-     controller: 'home',
-     action: 'index'
+    controller: 'home',
+    action: 'index'
   },
 
   'GET /q': {
-     controller: 'home',
-     action: 'line'
+    controller: 'home',
+    action: 'line'
+  },
+
+  'GET /analyze': {
+    controller: 'home',
+    action: 'analyze'
   },
 
   'GET /add': {
-     controller: 'home',
-     action: 'index'
+    controller: 'home',
+    action: 'index'
   },
 
   'GET /add/device': {
-     controller: 'home',
-     action: 'index'
+    controller: 'home',
+    action: 'index'
   },
 
   'GET /updates': {
-     controller: 'home',
-     action: 'updates'
+    controller: 'home',
+    action: 'updates'
   },
 
   'POST /superuser/create': {
-     controller: 'q',
-     action: 'create'
+    controller: 'q',
+    action: 'create'
   },
 
   'GET /superuser/create': {
@@ -72,48 +77,79 @@ module.exports.routes = {
   },
 
   'POST /addItem': {
-     controller: 'q',
-     action: 'add'
+    controller: 'q',
+    action: 'add'
   },
 
   'GET /about': {
-     controller: 'home',
-     action: 'about'
+    controller: 'home',
+    action: 'about'
   },
 
   'GET /add/alert': {
-     controller: 'home',
-     action: 'addAlert'
+    controller: 'home',
+    action: 'addAlert'
   },
 
   'POST /add/alert': {
-     controller: 'q',
-     action: 'addAlert'
+    controller: 'q',
+    action: 'addAlert'
   },
 
   'POST /remove/alert': {
-     controller: 'q',
-     action: 'removeAlert'
+    controller: 'q',
+    action: 'removeAlert'
   },
 
   'GET /settings': {
-     controller: 'home',
-     action: 'minorSettings'
+    controller: 'home',
+    action: 'minorSettings'
   },
 
   'GET /closerates': {
-     controller: 'home',
-     action: 'closes'
-  }
+    controller: 'home',
+    action: 'closes'
+  },
+
+  'GET /login': {
+    controller: 'home',
+    action: 'login'
+  },
+
+  'GET /signup': {
+    controller: 'home',
+    action: 'signup'
+  },
+
+  'GET /dashboard': {
+    controller: 'home',
+    action: 'dashboard'
+  },
+
+  'GET /landing': {
+    controller: 'home',
+    action: 'landing'
+  },
+
+  'GET /manager/dashboard': {
+    controller: 'home',
+    action: 'managerDashboard'
+  },
+
+  'GET /manager/settings': {
+    controller: 'home',
+    action: 'managerSettings'
+  },
+
 
   /***************************************************************************
-  *                                                                          *
-  * Custom routes here...                                                    *
-  *                                                                          *
-  * If a request to a URL doesn't match any of the custom routes above, it   *
-  * is matched against Sails route blueprints. See `config/blueprints.js`    *
-  * for configuration options and examples.                                  *
-  *                                                                          *
-  ***************************************************************************/
+   *                                                                          *
+   * Custom routes here...                                                    *
+   *                                                                          *
+   * If a request to a URL doesn't match any of the custom routes above, it   *
+   * is matched against Sails route blueprints. See `config/blueprints.js`    *
+   * for configuration options and examples.                                  *
+   *                                                                          *
+   ***************************************************************************/
 
 };

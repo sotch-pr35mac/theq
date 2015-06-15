@@ -1,0 +1,63 @@
+body {
+  background-color: #04a384;
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 30px;
+}
+
+.branding {
+  width: 300px;
+  height: auto;
+  text-align: center;
+}
+
+.box {
+  margin-top: 10px;
+  color: #000;
+  background-color: #F7EFEF;
+  width: 450px;
+  height: auto;
+  border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+
+.box h1 {
+  text-align: center;
+  font-weight: 300;
+  color: #04a384;
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+.box select {
+  margin-top: 10px;
+}
+
+
+.box label {
+  color: #000;
+  text-align: left;
+}
+
+.box .input-group {
+  margin-top: 10px;
+}
+
+.box button {
+  margin-top: 30px;
+}
+
+.box footer {
+  margin-top: 30px;
+  padding-top: 0px;
+  border-top-color: #d3d3d3;
+  border-top-style: solid;
+  border-top-width: 2px;
+}
+
+.box footer h3 {
+  font-size: 20px;
+}

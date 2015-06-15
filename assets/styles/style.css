@@ -23,6 +23,12 @@ body {
   border-radius: 0px;
 }
 
+.navbar-nav .active {
+  border-bottom-color: #fff;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+}
+
 .container-fluid > .navbar-collapse, .container-fluid > .navbar-header, .container > .navbar-collapse, .container > .navbar-header {
   background-color: #04a384;
 }
@@ -143,6 +149,37 @@ body {
   color: #fff;
   border-radius: 0px;
 }
+
+.btn-default:hover {
+  background-color: #fff;
+  color: #3498db;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #3498db;
+}
+
+.btn-default {
+  background-color: #3498db;
+  border-color: #3498db;
+  color: #fff;
+  border-radius: 0px;
+}
+
+.btn-warning:hover {
+  background-color: #fff;
+  color: #f1c40f;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #f1c40f;
+}
+
+.btn-warning {
+  background-color: #f1c40f;
+  border-color: #f1c40f;
+  color: #fff;
+  border-radius: 0px;
+}
+
 
 .btn-danger:hover {
   background-color: #fff;
