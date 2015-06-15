@@ -1,0 +1,250 @@
+body {
+  padding-top: 0px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar {
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+
+.header {
+  background-color: #04a384;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #fff;
+}
+
+.header p {
+  font-weight: 400;
+}
+
+.header .btn-green {
+  color: #fff;
+  background-color: #04a384;
+  border-radius: 0px;
+  border-color: #181009;
+  border-style: solid;
+  border-width: 2px;
+  font-weight: 300;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+.header .btn-green:hover {
+  color: #181009;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.header .btn-green-invert {
+  color: #181009;
+  background-color: #fff;
+  border-color: #fff;
+  border-radius: 0px;
+  border-style: solid;
+  border-width: 2px;
+  font-weight: 300;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.header .btn-green-invert:hover {
+  color: #fff;
+  background-color: #181009;
+  border-color: #181009;
+}
+
+.header .brand-image {
+  margin-top: -10px;
+  padding-top: 0px;
+  margin-bottom: 10px;
+  height: 300%;
+  width: auto;
+}
+
+.feature {
+  background-color: #fff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: right;
+}
+
+.feature .container {
+  width: 70%;
+}
+
+.feature h1 {
+  font-weight: 300;
+  color: #04a384;
+}
+
+.feature h2 {
+  font-weight: 300;
+  font-size: 32px;
+  color: #181009;
+}
+
+.feature-invert {
+  background-color: #eeeeee;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.feature-invert .container {
+  width: 70%;
+}
+
+.feature-invert h1 {
+  font-weight: 300;
+  color: #181009;
+}
+
+.feature-invert h2 {
+  font-weight: 300;
+  font-size: 32px;
+  color: #04a384;
+}
+
+
+.feature-green {
+  background-color: #04a384;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #fff;
+  text-align: right;
+}
+
+.feature-green .container {
+  width: 90%;
+}
+
+.feature-green h1 {
+  font-weight: 300;
+  color: #fff;
+}
+
+.feature-green h2 {
+  font-weight: 300
+  color: #181009;
+  font-size: 32px
+}
+
+.breaker-brown {
+  height: 100px;
+  background-color: #181009;
+  color: #fff;
+  padding-top: 10px;
+}
+
+.breaker-brown .btn {
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.breaker-brown .btn-white {
+  color: #fff;
+  background-color: #181009;
+  border-radius: 0px;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 2px;
+  font-weight: 300;
+}
+
+.breaker-brown .btn-white:hover {
+  color: #181009;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.breaker-brown .btn-white-invert {
+  color: #181009;
+  background-color: #fff;
+  border-radius: 0px;
+  border-color: #181009;
+  border-style: solid;
+  border-width: 2px;
+  font-weight: 300;
+}
+
+.breaker-brown .btn-white-invert:hover {
+  color: #fff;
+  background-color: #181009;
+  border-color: #fff;
+}
+
+.price-table {
+	font-family: 'Open Sans', sans-serif;
+  background: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	border: 7px solid #eeeeee;
+	-moz-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+}
+.price-table:hover {
+	background: rgba(0,0,0, .03);
+	border-color: #04a384;
+}
+.price-table .price-table-heading {
+	color: #333333;
+	background: #f9f9f9;
+	padding: 10px 0;
+	margin: 0;
+}
+.price-table .price-table-heading .title {
+	color: #181009;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+.price-table > .price-table-body {
+	color: #FFFFFF;
+	background-color: #04a384;
+	padding: 50px 0 30px;
+	-moz-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+}
+.price-table > .price-table-body .value {
+	font-size: 66px;
+	font-weight: 300;
+	color: #FFFFFF;
+	padding: 0;
+}
+.price-table > .price-table-body .value small {
+	font-size: 16px;
+}
+.price-table > .list-group {
+	color: #333;
+	font-weight: 400;
+	margin-bottom: 0;
+}
+.price-table > .list-group .list-group-item {
+	color: #333;
+	font-weight: 400;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+.price-table .btn {
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	font-weight: 400;
+  background-color: #181009;
+  border-color: #181009;
+}
+
+.price-table .btn:hover {
+  background-color: #fff;
+  border-color: #181009;
+  color: #181009;
+}
+.price-table-footer {
+	background: #eeeeee;
+	padding: 15px 0;
+}

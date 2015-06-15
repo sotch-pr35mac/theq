@@ -220,6 +220,10 @@ module.exports = {
 
   dashboard: function(req, res) {
     res.view('home/dashboard');
+  },
+
+  landing: function(req, res) {
+    res.view('home/landing');
   }
 
 };
