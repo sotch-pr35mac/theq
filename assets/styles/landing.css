@@ -186,21 +186,25 @@ body {
 	-o-transition: all .3s ease;
 	-webkit-transition: all .3s ease;
 }
+
 .price-table:hover {
 	background: rgba(0,0,0, .03);
 	border-color: #04a384;
 }
+
 .price-table .price-table-heading {
 	color: #333333;
 	background: #f9f9f9;
 	padding: 10px 0;
 	margin: 0;
 }
+
 .price-table .price-table-heading .title {
 	color: #181009;
 	font-weight: 500;
 	letter-spacing: 1px;
 }
+
 .price-table > .price-table-body {
 	color: #FFFFFF;
 	background-color: #04a384;
@@ -209,20 +213,24 @@ body {
 	-o-transition: all .3s ease;
 	-webkit-transition: all .3s ease;
 }
+
 .price-table > .price-table-body .value {
 	font-size: 66px;
 	font-weight: 300;
 	color: #FFFFFF;
 	padding: 0;
 }
+
 .price-table > .price-table-body .value small {
 	font-size: 16px;
 }
+
 .price-table > .list-group {
 	color: #333;
 	font-weight: 400;
 	margin-bottom: 0;
 }
+
 .price-table > .list-group .list-group-item {
 	color: #333;
 	font-weight: 400;
@@ -230,6 +238,7 @@ body {
 	-moz-border-radius: 0;
 	border-radius: 0;
 }
+
 .price-table .btn {
 	-webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
@@ -244,6 +253,7 @@ body {
   border-color: #181009;
   color: #181009;
 }
+
 .price-table-footer {
 	background: #eeeeee;
 	padding: 15px 0;
