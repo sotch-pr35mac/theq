@@ -121,6 +121,11 @@ module.exports.routes = {
     action: 'signup'
   },
 
+  'GET /dashboard': {
+    controller: 'home',
+    action: 'dashboard'
+  },
+
   /***************************************************************************
    *                                                                          *
    * Custom routes here...                                                    *

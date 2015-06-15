@@ -164,9 +164,7 @@ module.exports = {
     res.view();
   },
 
-  /*
-   * This function handles the page view requests for `/closerates`, which is the page where we keep track of close rates
-   */
+
   closes: function(req, res) {
     Q.find().exec(function(err, locs) {
       if (err || locs == undefined) {
@@ -218,7 +216,10 @@ module.exports = {
         });
       }
     });
-
   },
+
+  dashboard: function(req, res) {
+    res.view('home/dashboard');
+  }
 
 };
