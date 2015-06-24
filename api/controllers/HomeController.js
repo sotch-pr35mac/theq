@@ -13,14 +13,18 @@ module.exports = {
    * This function handles the page view request for `/settings`, which is the settings page that allows you to clear defaults
    */
   minorSettings: function(req, res) {
-    res.view('home/settings');
+    res.view({
+      currentPage: "settings"
+    });
   },
 
   /*
    * This function handles the page view request for `/about`, which is the about page
    */
   about: function(req, res) {
-    res.view();
+    res.view({
+      currentPage: "about",
+    });
   },
 
   /*
@@ -33,7 +37,8 @@ module.exports = {
         res.serverError();
       } else {
         res.view({
-          locations: qs
+          locations: qs,
+          currentPage: "add"
         });
       }
     });
@@ -144,7 +149,8 @@ module.exports = {
         }
         console.log(locs);
         res.view({
-          locations: locs
+          locations: locs,
+          currentPage: "line"
         });
       }
     });
@@ -154,14 +160,18 @@ module.exports = {
    * This function handles the page request for '/analyze', which is the page to dispay anaylsis of repairs completed
    */
   analyze: function(req, res) {
-    res.view();
+    res.view({
+      currentPage: 'analyze',
+    });
   },
 
   /*
    * This functions handles the page view request for `/updates`, which is the page to display the upcoming scheduled updates to the system
    */
   updates: function(req, res) {
-    res.view();
+    res.view({
+      currentPage: 'updates'
+    });
   },
 
 
@@ -189,7 +199,8 @@ module.exports = {
         }
 
         res.view('home/close_rates', {
-          locations: locs
+          locations: locs,
+          currentPage: 'closeRates'
         });
       }
     });
@@ -217,6 +228,8 @@ module.exports = {
       }
     });
   },
+
+  // Design testing
 
   dashboard: function(req, res) {
     res.view('home/dashboard');
