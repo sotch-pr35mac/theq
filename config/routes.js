@@ -32,78 +32,8 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  'GET /': {
-    controller: 'home',
-    action: 'index'
-  },
-
-  'GET /index': {
-     controller: 'home',
-     action: 'index'
-  },
-
-  'GET /q': {
-     controller: 'home',
-     action: 'line'
-  },
-
-  'GET /add': {
-     controller: 'home',
-     action: 'index'
-  },
-
-  'GET /add/device': {
-     controller: 'home',
-     action: 'index'
-  },
-
-  'GET /updates': {
-     controller: 'home',
-     action: 'updates'
-  },
-
-  'POST /superuser/create': {
-     controller: 'q',
-     action: 'create'
-  },
-
-  'GET /superuser/create': {
-    view: 'superuser/create'
-  },
-
-  'POST /addItem': {
-     controller: 'q',
-     action: 'add'
-  },
-
-  'GET /about': {
-     controller: 'home',
-     action: 'about'
-  },
-
-  'GET /add/alert': {
-     controller: 'home',
-     action: 'addAlert'
-  },
-
-  'POST /add/alert': {
-     controller: 'q',
-     action: 'addAlert'
-  },
-
-  'POST /remove/alert': {
-     controller: 'q',
-     action: 'removeAlert'
-  },
-
-  'GET /settings': {
-     controller: 'home',
-     action: 'minorSettings'
-  },
-
-  'GET /closerates': {
-     controller: 'home',
-     action: 'closes'
+  '/': {
+    view: 'homepage'
   }
 
   /***************************************************************************
