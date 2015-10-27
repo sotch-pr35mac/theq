@@ -1,0 +1,147 @@
+{
+  "data": {
+    "q": [
+      {
+        "location": "Glen Ellyn",
+        "line": [
+          {
+            "deviceMake": "Macbook Pro",
+            "deviceModel": "123123123",
+            "repairType": "Screen",
+            "repairLength": 2,
+            "ticketNumber": "1234",
+            "promiseTime": "2015/06/18 23:00",
+            "urgent": true,
+            "started": "Preston"
+          },
+          {
+            "deviceMake": "Nexus",
+            "deviceModel": "123123",
+            "repairType": "Battery",
+            "repairLength": 1,
+            "ticketNumber": "123123",
+            "promiseTime": "2015/06/19 04:00",
+            "urgent": true,
+            "started": "Preston"
+          }
+        ],
+        "alerts": [],
+        "createdAt": "2015-06-13T05:45:10.939Z",
+        "updatedAt": "2015-10-26T04:36:40.942Z",
+        "id": 1,
+        "closeRates": []
+      },
+      {
+        "location": "Wheaton",
+        "line": [],
+        "alerts": [],
+        "closeRate": [],
+        "closeRates": [],
+        "createdAt": "2015-06-15T02:41:41.902Z",
+        "updatedAt": "2015-10-26T04:36:40.943Z",
+        "id": 2
+      }
+    ],
+    "superuser": [],
+    "user": [
+      {
+        "accountType": "technician",
+        "password": "$2a$10$v4WMOY2sFEYQZ7Sm9kCCUuTfYUtwPmUiafjCPmaKEswD1IbsdKz6O",
+        "createdAt": "2015-06-13T23:28:58.027Z",
+        "updatedAt": "2015-06-13T23:28:58.027Z",
+        "id": 1
+      }
+    ]
+  },
+  "schema": {
+    "q": {
+      "location": {
+        "type": "string"
+      },
+      "line": {
+        "type": "array",
+        "defaultsTo": []
+      },
+      "alerts": {
+        "type": "array",
+        "defaultsTo": []
+      },
+      "closeRates": {
+        "type": "array",
+        "defaultsTo": []
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "superuser": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "accountType": {
+        "type": "string",
+        "defaultsTo": "technician"
+      },
+      "username": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string"
+      },
+      "fullName": {
+        "type": "string"
+      },
+      "firstName": {
+        "type": "string"
+      },
+      "lastName": {
+        "type": "string"
+      },
+      "email": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "q": {
+      "id": 2
+    },
+    "superuser": {},
+    "user": {
+      "id": 1
+    }
+  }
+}
