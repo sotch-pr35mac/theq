@@ -33,8 +33,26 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    view: 'homepage'
+    controller: 'user',
+    action: 'dash'
+  },
+
+  '/welcome': {
+     controller: 'landing',
+     action: 'home'
+  },
+
+  'GET /login': {
+     controller: 'landing',
+     action: 'login'
+  },
+
+  'POST /login': {
+     controller: 'auth',
+     action: 'login'
   }
+
+
 
   /***************************************************************************
   *                                                                          *
